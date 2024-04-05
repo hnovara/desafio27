@@ -6,8 +6,8 @@ Nuestra plataforma de streaming tiene una base de datos de películas que incluy
 
 Datos de entrada y salida:
 
-* Entrada: La aplicación necesitará acceder a una base de datos de películas que contenga información como el título, la descripción, el género, la duración y una imagen.
-* Salida: La aplicación mostrará la información de las películas en las diferentes rutas, como el catálogo completo de películas y los detalles de una película específica.
+* Entrada: La aplicación necesitará acceder a una base de datos de películas, a una api publica,  que contenga información como el título, la descripción, el género, la duración y una imagen.
+* Salida: La aplicación mostrará la información de las películas en las diferentes rutas, como el catálogo completo de películas (el map) y los detalles de una película específica (el id).
 
 Requerimientos funcionales:
 
@@ -25,9 +25,9 @@ Pasos a realizar para resolver el ejercicio:
 1.Crear una aplicación React con create-react-app.
 2.Instalar las dependencias necesarias: react-router-dom.
 3.Crear tres componentes de React: Home, Catalog y MovieDetail.
-4.Importar los componentes de React Router: BrowserRouter, Route y Switch.
-5.Definir las rutas en la aplicación utilizando Route y Switch.
-6.En el componente Catalog, mostrar el listado completo de películas utilizando useState y un array de objetos.
+4.Importar los componentes de React Router: BrowserRouter, Route y Routes.
+5.Definir las rutas en la aplicación utilizando Route y Routes.
+6.En el componente Catalog, mostrar el listado completo de películas utilizando useState, useEffect y un array de objetos.
 7.En el componente MovieDetail, mostrar la información detallada de una película específica cuando se hace clic en ella en el catálogo.
-8.Estilizar la aplicación utilizando CSS o alguna librería de estilos como Bootstrap.
+8.Estilizar la aplicación utilizando CSS.
 9.Probar la aplicación para asegurarse de que todo funcione correctamente.
