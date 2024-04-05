@@ -1,0 +1,33 @@
+Para este ejercicio, vamos a crear una aplicación web simple que muestre información sobre las películas de una plataforma de streaming. La aplicación contará con tres rutas, una para la página principal, otra para mostrar el catálogo completo de películas y una última para mostrar los detalles de una película específica. Utilizaremos componentes de React y el hook useState para manejar el estado de la aplicación y la librería React Router para manejar las rutas.
+
+Logica de negocio:
+
+Nuestra plataforma de streaming tiene una base de datos de películas que incluyen información como el título, la descripción, el género, la duración y una imagen. Los usuarios pueden navegar por el catálogo completo de películas y ver los detalles de una película específica.
+
+Datos de entrada y salida:
+
+* Entrada: La aplicación necesitará acceder a una base de datos de películas que contenga información como el título, la descripción, el género, la duración y una imagen.
+* Salida: La aplicación mostrará la información de las películas en las diferentes rutas, como el catálogo completo de películas y los detalles de una película específica.
+
+Requerimientos funcionales:
+
+* Mostrar la página principal con una breve descripción de la plataforma.
+* Mostrar el catálogo completo de películas en una ruta separada.
+* Mostrar los detalles de una película específica cuando se hace clic en ella en el catálogo.
+
+Requerimientos no funcionales:
+
+* La aplicación debe ser fácil de usar e intuitiva.
+* La aplicación debe ser responsiva y adaptarse a diferentes tamaños de pantalla.
+
+Pasos a realizar para resolver el ejercicio:
+
+1.Crear una aplicación React con create-react-app.
+2.Instalar las dependencias necesarias: react-router-dom.
+3.Crear tres componentes de React: Home, Catalog y MovieDetail.
+4.Importar los componentes de React Router: BrowserRouter, Route y Switch.
+5.Definir las rutas en la aplicación utilizando Route y Switch.
+6.En el componente Catalog, mostrar el listado completo de películas utilizando useState y un array de objetos.
+7.En el componente MovieDetail, mostrar la información detallada de una película específica cuando se hace clic en ella en el catálogo.
+8.Estilizar la aplicación utilizando CSS o alguna librería de estilos como Bootstrap.
+9.Probar la aplicación para asegurarse de que todo funcione correctamente.
