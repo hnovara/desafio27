@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Catalog = () => {
   const [movies, setMovies] = useState([]);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const searchTerm = searchParams.get('search') || '';
 
   useEffect(() => {
-    fetch(`https://www.omdbapi.com/?apikey=d1b4985&s=avengers&type=movie&page=1`)
+    fetch(`https://www.omdbapi.com/?apikey=d1b4985&s=${searchTerm}&type=movie&page=1`)
       .then((response) => response.json())
       .then((data) => {
         if (data.Search) {
@@ -13,11 +16,14 @@ const Catalog = () => {
         }
       })
       .catch((error) => console.log("Error fetching data:", error));
-  }, []);
+  }, [searchTerm]);
 
   return (
     <div className="catalog-container">
       <h2>Catálogo</h2>
+      <div>
+        <p>Resultados para: <strong>{searchTerm}</strong></p>
+      </div>
       <ul className="movie-list">
         {movies.map((movie) => (
           <li key={movie.imdbID}>
@@ -26,7 +32,7 @@ const Catalog = () => {
         ))}
       </ul>
       <div className="button-container">
-        <Link to="/" className="btn">Volver a Inicio</Link>
+        <Link to="/" className="btn">Volver al buscador</Link>
       </div>
     </div>
   );

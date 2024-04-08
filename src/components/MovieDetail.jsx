@@ -19,11 +19,12 @@ const MovieDetail = () => {
       {movie && (
         <div>
           <h2>{movie.Title}</h2>
-          <p>Año: {movie.Year}</p>
-          <p>Director: {movie.Director}</p>
-          <p>Sinopsis: {movie.Plot}</p>
+          <img src={movie.Poster} alt={movie.Title} />
+          <p><strong>Año:</strong> {movie.Year}</p>
+          <p><strong>Director:</strong> {movie.Director}</p>
+          <p><strong>Sinopsis:</strong> {movie.Plot}</p>
           <div className="button-container">
-            <Link to="/catalog" className="btn">Volver al Catálogo</Link>
+            <Link to="/" className="btn">Volver al buscador</Link>
           </div>
         </div>
       )}
