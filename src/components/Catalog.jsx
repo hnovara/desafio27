@@ -16,15 +16,18 @@ const Catalog = () => {
   }, []);
 
   return (
-    <div>
+    <div className="catalog-container">
       <h2>Catálogo</h2>
-      <ul>
+      <ul className="movie-list">
         {movies.map((movie) => (
           <li key={movie.imdbID}>
-            <Link to={`/movie/${movie.imdbID}`}>{movie.Title}</Link>
+            <Link to={`/movie/${movie.imdbID}`} className="movie-link">{movie.Title}</Link>
           </li>
         ))}
       </ul>
+      <div className="button-container">
+        <Link to="/" className="btn">Volver a Inicio</Link>
+      </div>
     </div>
   );
 };

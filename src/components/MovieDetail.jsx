@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -15,13 +15,16 @@ const MovieDetail = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="movie-detail-container">
       {movie && (
         <div>
           <h2>{movie.Title}</h2>
           <p>Año: {movie.Year}</p>
           <p>Director: {movie.Director}</p>
           <p>Sinopsis: {movie.Plot}</p>
+          <div className="button-container">
+            <Link to="/catalog" className="btn">Volver al Catálogo</Link>
+          </div>
         </div>
       )}
     </div>

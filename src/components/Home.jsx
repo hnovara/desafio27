@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <h1>Bienvenidos al portal de películas</h1>
-      <Link to="/catalog">Mirá el catálogo</Link>
+      <Link to="/catalog" className="catalog-link btn">Mirá el catálogo</Link>
     </div>
   );
 };
