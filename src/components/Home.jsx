@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Home() {
+const Home = () => {
   return (
     <div>
-      <h1>Bienvenido a nuestra plataforma de streaming</h1>
-      <p>¡Encuentra aquí una amplia selección de películas para disfrutar!</p>
+      <h1>Bienvenidos al portal de películas</h1>
+      <Link to="/catalog">Mirá el catálogo</Link>
     </div>
   );
-}
+};
 
 export default Home;

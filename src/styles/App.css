@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 36px;
+  color: #ff5733;
+  margin-bottom: 20px;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.home-link:hover {
+  background-color: #ff8c66;
+}
+
+.catalog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.catalog-title {
+  font-size: 24px;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.movie-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-item {
+  margin-bottom: 20px;
+}
+
+.movie-link {
+  display: block;
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.movie-link:hover {
+  background-color: #00e5ff;
+}
+
+.movie-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-detail-title {
+  font-size: 28px;
+  color: #ff33cc;
+  margin-bottom: 20px;
+}
+
+.movie-detail-info {
+  font-size: 18px;
+  color: #666;
+}

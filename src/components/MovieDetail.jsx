@@ -1,41 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-function MovieDetail() {
+const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetchMovieDetail();
-  }, []);
-
-  const fetchMovieDetail = async () => {
-    try {
-      const response = await fetch(`http://www.omdbapi.com/?apikey=d1b4985&i=${id}`);
-      const data = await response.json();
-      if (data.Response === "True") {
+    fetch(`https://www.omdbapi.com/?apikey=d1b4985&i=${id}`)
+      .then((response) => response.json())
+      .then((data) => {
         setMovie(data);
-      } else {
-        console.error('Error fetching movie details:', data.Error);
-      }
-    } catch (error) {
-      console.error('Error fetching movie details:', error);
-    }
-  };
-
-  if (!movie) {
-    return <div>Cargando...</div>;
-  }
+      })
+      .catch((error) => console.log("Error fetching data:", error));
+  }, [id]);
 
   return (
     <div>
-      <h2>{movie.Title}</h2>
-      <p>{movie.Plot}</p>
-      <p>Género: {movie.Genre}</p>
-      <p>Duración: {movie.Runtime}</p>
-      <img src={movie.Poster} alt={movie.Title} />
+      {movie && (
+        <div>
+          <h2>{movie.Title}</h2>
+          <p>Año: {movie.Year}</p>
+          <p>Director: {movie.Director}</p>
+          <p>Sinopsis: {movie.Plot}</p>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default MovieDetail;
